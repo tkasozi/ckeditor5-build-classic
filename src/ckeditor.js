@@ -21,6 +21,7 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -49,6 +50,7 @@ ClassicEditor.builtinPlugins = [
 	ImageToolbar,
 	ImageUpload,
 	Indent,
+	IndentBlock,
 	Link,
 	List,
 	MediaEmbed,
@@ -61,8 +63,7 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-	toolbar: {
-		items: [
+	toolbar: [
 			'heading',
 			'|',
 			'bold',
@@ -79,24 +80,16 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
-		]
-	},
-	image: {
-		toolbar: [
+			'redo',
 			'imageStyle:full',
 			'imageStyle:side',
 			'|',
-			'imageTextAlternative'
-		]
-	},
-	table: {
-		contentToolbar: [
+			'imageTextAlternative',
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
-		]
-	},
+			'mergeTableCells',
+			'sourcedialog'
+		],
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };

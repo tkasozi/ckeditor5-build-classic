@@ -94,5 +94,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-html-embed": "^24.0.0"
   }
 }
